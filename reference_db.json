@@ -1,0 +1,833 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "2026.10.28-2",
+  "dataVersionCode": 2026102802,
+  "generatedAt": "2026-10-28",
+  "isDemo": false,
+  "description": "Erstbestand. Enthält belegte BLE-Kennungen (Bluetooth SIG), Modellbezeichnungen und belegte Fundstellen von Kennzeichnungen (Herstellerseiten). Technische Originaldaten sind noch nicht verifiziert erfasst und daher als unbekannt markiert.",
+  "sources": [
+    {
+      "id": "sig-company-identifiers",
+      "title": "Bluetooth SIG Assigned Numbers – Company Identifiers",
+      "url": "https://bitbucket.org/bluetooth-SIG/public/src/main/assigned_numbers/company_identifiers/company_identifiers.yaml",
+      "publisher": "Bluetooth SIG",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "sig-member-uuids",
+      "title": "Bluetooth SIG Assigned Numbers – Member UUIDs (16-Bit)",
+      "url": "https://bitbucket.org/bluetooth-SIG/public/src/main/assigned_numbers/uuids/member_uuids.yaml",
+      "publisher": "Bluetooth SIG",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "project-model-list",
+      "title": "Modell- und Herstellerliste der Projektvorgabe Phase 2 (nur Bezeichnungen, keine technischen Daten)",
+      "publisher": "Projektvorgabe",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "xiaomi-ka-07424",
+      "title": "Xiaomi Support: How to read Mi Scooter serial number (SN)",
+      "url": "https://www.mi.com/global/support/article/KA-07424/",
+      "publisher": "Xiaomi",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "kukirin-id-plate",
+      "title": "KuKirin Prime Store: How to Identify Your KuKirin Scooter Model and S/N (VIN)",
+      "url": "https://kukirinprime.com/pages/how-to-identify-your-kukirin-scooter-model-and-s-nvin",
+      "publisher": "KuKirin Prime Store",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "segway-g30p-manual",
+      "title": "Ninebot KickScooter MAX G30P User Manual",
+      "url": "https://store.segway.com/pub/media/wysiwyg/warranty/Ninebot-KickScooter-Max-G30P-User-Manual.pdf",
+      "publisher": "Segway-Ninebot",
+      "note": "Am 28.10.2026 nicht abrufbar (Server lieferte eine Fehlerseite). Inhalte daher noch nicht ausgewertet."
+    }
+  ],
+  "manufacturers": [
+    {
+      "id": "XIAOMI",
+      "name": "Xiaomi",
+      "priority": 1,
+      "markings": [
+        {
+          "id": "xiaomi-sn-label",
+          "kind": "SERIAL_NUMBER",
+          "zone": "DECK_LOWER_SIDE",
+          "status": "CONFIRMED",
+          "description": "Seriennummer (SN) seitlich unten am Fahrzeug. Die genaue Stelle zeigt das Herstellerfoto in der Quelle.",
+          "steps": [
+            "Scooter sicher abstellen und ausschalten.",
+            "Seitlich im unteren Bereich des Fahrzeugs nach dem SN-Aufkleber suchen.",
+            "Seriennummer ablesen oder fotografieren."
+          ],
+          "sourceQuote": "Please check the serial number from the side bottom of MiScooter",
+          "sourceIds": [
+            "xiaomi-ka-07424"
+          ],
+          "verifiedAt": "2026-10-28"
+        },
+        {
+          "id": "xiaomi-sn-app",
+          "kind": "SERIAL_NUMBER",
+          "zone": "MANUFACTURER_APP",
+          "status": "CONFIRMED",
+          "alternative": true,
+          "description": "Anzeige der Seriennummer in der Hersteller-App (Mi Home oder Segway-Ninebot), wenn sich der Scooter einschalten und verbinden lässt. Scooter Inspector selbst verbindet sich nicht.",
+          "steps": [
+            "Mi Home: Scan for vehicle → Add device from nearby → MiScooter wählen.",
+            "Einstellungen (oben rechts) → Basic Info → Vehicle serial number."
+          ],
+          "sourceQuote": "Click Scan for vehicle→Add device from nearby and click MiScooter icon →enter main screen and then click settings (upper right icon) →Basic Info→ Vehicle serial number.",
+          "sourceIds": [
+            "xiaomi-ka-07424"
+          ],
+          "verifiedAt": "2026-10-28"
+        },
+        {
+          "id": "xiaomi-sn-box",
+          "kind": "SERIAL_NUMBER",
+          "zone": "PACKAGING",
+          "status": "CONFIRMED",
+          "alternative": true,
+          "description": "Bei neuen, unausgepackten Fahrzeugen steht die Seriennummer auf dem Umkarton.",
+          "sourceQuote": "If MiScooter is not be unbox and new, you can get serial number information from outer box",
+          "sourceIds": [
+            "xiaomi-ka-07424"
+          ],
+          "verifiedAt": "2026-10-28"
+        },
+        {
+          "id": "xiaomi-front-wheel-sn",
+          "kind": "PART_NUMBER",
+          "zone": "FRONT_WHEEL",
+          "status": "CONFIRMED",
+          "alternative": true,
+          "description": "Fehlt das SN-Etikett und lässt sich der Scooter nicht einschalten, kann der Xiaomi-Service die Fahrzeug-SN über die Seriennummer des Vorderrads ermitteln. Die genaue Position am Rad beschreibt die Quelle nicht.",
+          "sourceQuote": "you can offer the front wheel serial number and send it to Xiaomi service and then we can search the vehicle SN from database by front wheel SN",
+          "sourceIds": [
+            "xiaomi-ka-07424"
+          ],
+          "verifiedAt": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": "SEGWAY_NINEBOT",
+      "name": "Segway/Ninebot",
+      "aliases": [
+        "Segway",
+        "Ninebot"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "KUKIRIN",
+      "name": "KuKirin/Kugoo",
+      "aliases": [
+        "KuKirin",
+        "Kugoo"
+      ],
+      "priority": 1,
+      "markings": [
+        {
+          "id": "kukirin-id-plate",
+          "kind": "TYPE_PLATE",
+          "zone": "DECK_LEFT_SIDE",
+          "status": "CONFIRMED",
+          "description": "Metallenes ID-Schild an der linken Seite des Trittbretts (Seite des Seitenständers). Enthält Modellname, S/N (VIN) und technische Codes.",
+          "steps": [
+            "Scooter auf den Seitenständer stellen.",
+            "Linke Seite des Trittbretts (Ständerseite) betrachten.",
+            "Metallschild suchen und Modellname, S/N und Codes ablesen oder fotografieren."
+          ],
+          "sourceQuote": "You can find the model name and VIN (Vehicle Identification Number) on the metal plate located on the left side of the scooter's deck (the same side as the kickstand).",
+          "sourceIds": [
+            "kukirin-id-plate"
+          ],
+          "verifiedAt": "2026-10-28"
+        },
+        {
+          "id": "kukirin-sn-vin",
+          "kind": "SERIAL_NUMBER",
+          "zone": "DECK_LEFT_SIDE",
+          "status": "CONFIRMED",
+          "description": "Die S/N ist laut Hersteller die VIN und steht auf dem ID-Schild an der linken Trittbrettseite.",
+          "sourceQuote": "Your scooter's VIN is the S/N (Serial Number) found on the ID plate.",
+          "sourceIds": [
+            "kukirin-id-plate"
+          ],
+          "verifiedAt": "2026-10-28"
+        },
+        {
+          "id": "kukirin-tech-codes",
+          "kind": "CONTROLLER_ID",
+          "zone": "DECK_LEFT_SIDE",
+          "status": "CONFIRMED",
+          "description": "Technische Codes auf dem ID-Schild (z. B. „G500…“, „V1.0“) geben laut Hersteller Spannung, Motorleistung und Controllerversion an. Die Entschlüsselung der Codes ist nicht dokumentiert.",
+          "sourceQuote": "These numbers (like G500... or V1.0) indicate your scooter's voltage, motor power, and controller version.",
+          "sourceIds": [
+            "kukirin-id-plate"
+          ],
+          "verifiedAt": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": "VESC",
+      "name": "VESC-basierte Controller",
+      "aliases": [
+        "VESC"
+      ],
+      "priority": 1,
+      "notes": "Offene Controller-Plattform, kein Fahrzeughersteller."
+    },
+    {
+      "id": "NAVEE",
+      "name": "Navee",
+      "priority": 2
+    },
+    {
+      "id": "NIU",
+      "name": "NIU",
+      "priority": 2
+    },
+    {
+      "id": "SOFLOW",
+      "name": "SoFlow",
+      "priority": 2
+    },
+    {
+      "id": "DUALTRON",
+      "name": "Dualtron/Minimotors",
+      "aliases": [
+        "Dualtron",
+        "Minimotors"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "JOYOR",
+      "name": "Joyor",
+      "priority": 2
+    },
+    {
+      "id": "ISCOOTER",
+      "name": "iScooter",
+      "priority": 2
+    },
+    {
+      "id": "VMAX",
+      "name": "VMAX",
+      "priority": 3
+    },
+    {
+      "id": "EGRET",
+      "name": "Egret",
+      "priority": 3
+    },
+    {
+      "id": "ETWOW",
+      "name": "E-TWOW",
+      "priority": 3
+    },
+    {
+      "id": "VSETT",
+      "name": "VSETT",
+      "priority": 3
+    },
+    {
+      "id": "KAABO",
+      "name": "Kaabo",
+      "priority": 3
+    },
+    {
+      "id": "TEVERUN",
+      "name": "Teverun",
+      "priority": 3
+    }
+  ],
+  "fingerprints": [
+    {
+      "id": "xiaomi-company-038f",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "COMPANY_ID",
+      "pattern": "0x038F",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-company-identifiers"
+      ],
+      "description": "Firmenkennung 0x038F ist bei der Bluetooth SIG für Xiaomi Inc. registriert (nicht scooter-spezifisch)."
+    },
+    {
+      "id": "xiaomi-uuid-fe95",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "SERVICE_UUID",
+      "pattern": "0000fe95-0000-1000-8000-00805f9b34fb",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-member-uuids"
+      ],
+      "description": "16-Bit-UUID 0xFE95 ist für Xiaomi Inc. registriert (nicht scooter-spezifisch)."
+    },
+    {
+      "id": "xiaomi-uuid-fdab",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "SERVICE_UUID",
+      "pattern": "0000fdab-0000-1000-8000-00805f9b34fb",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-member-uuids"
+      ],
+      "description": "16-Bit-UUID 0xFDAB ist für Xiaomi Inc. registriert."
+    },
+    {
+      "id": "xiaomi-uuid-fdaa",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "SERVICE_UUID",
+      "pattern": "0000fdaa-0000-1000-8000-00805f9b34fb",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-member-uuids"
+      ],
+      "description": "16-Bit-UUID 0xFDAA ist für Xiaomi Inc. registriert."
+    },
+    {
+      "id": "xiaomi-uuid-fd2d",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "SERVICE_UUID",
+      "pattern": "0000fd2d-0000-1000-8000-00805f9b34fb",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-member-uuids"
+      ],
+      "description": "16-Bit-UUID 0xFD2D ist für Xiaomi Inc. registriert."
+    },
+    {
+      "id": "xiaomi-uuid-fcc0",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "SERVICE_UUID",
+      "pattern": "0000fcc0-0000-1000-8000-00805f9b34fb",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-member-uuids"
+      ],
+      "description": "16-Bit-UUID 0xFCC0 ist für Xiaomi Inc. registriert."
+    },
+    {
+      "id": "xiaomi-uuid-fc75",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "SERVICE_UUID",
+      "pattern": "0000fc75-0000-1000-8000-00805f9b34fb",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-member-uuids"
+      ],
+      "description": "16-Bit-UUID 0xFC75 ist für Xiaomi Inc. registriert."
+    },
+    {
+      "id": "xiaomi-uuid-fc66",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "SERVICE_UUID",
+      "pattern": "0000fc66-0000-1000-8000-00805f9b34fb",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-member-uuids"
+      ],
+      "description": "16-Bit-UUID 0xFC66 ist für Xiaomi Inc. registriert."
+    },
+    {
+      "id": "xiaomi-uuid-fc46",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "SERVICE_UUID",
+      "pattern": "0000fc46-0000-1000-8000-00805f9b34fb",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-member-uuids"
+      ],
+      "description": "16-Bit-UUID 0xFC46 ist für Xiaomi Inc. registriert."
+    },
+    {
+      "id": "ninebot-company-0f1f",
+      "manufacturerIds": [
+        "SEGWAY_NINEBOT"
+      ],
+      "type": "COMPANY_ID",
+      "pattern": "0x0F1F",
+      "strength": "REGISTERED_ID",
+      "verification": "VERIFIED",
+      "sourceIds": [
+        "sig-company-identifiers"
+      ],
+      "description": "Firmenkennung 0x0F1F ist bei der Bluetooth SIG für Ninebot (Changzhou) Tech Co., Ltd. registriert."
+    },
+    {
+      "id": "xiaomi-name-schema",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "^mi\\s?scooter",
+      "strength": "NAME_SCHEMA",
+      "verification": "UNVERIFIED",
+      "description": "Namensschema „MIScooter…“ aus Community-Werkzeugen bekannt, nicht offiziell dokumentiert."
+    },
+    {
+      "id": "xiaomi-name-mention",
+      "manufacturerIds": [
+        "XIAOMI"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "xiaomi|mi\\s?electric\\s?scooter",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt Xiaomi."
+    },
+    {
+      "id": "ninebot-name-schema",
+      "manufacturerIds": [
+        "SEGWAY_NINEBOT"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "^nbscooter",
+      "strength": "NAME_SCHEMA",
+      "verification": "UNVERIFIED",
+      "description": "Namensschema „NBScooter…“ aus Community-Werkzeugen bekannt, nicht offiziell dokumentiert."
+    },
+    {
+      "id": "ninebot-name-mention",
+      "manufacturerIds": [
+        "SEGWAY_NINEBOT"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "ninebot|segway",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt Ninebot oder Segway."
+    },
+    {
+      "id": "kukirin-name-mention",
+      "manufacturerIds": [
+        "KUKIRIN"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "ku\\s?kirin|kugoo",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt KuKirin oder Kugoo."
+    },
+    {
+      "id": "vesc-name-mention",
+      "manufacturerIds": [
+        "VESC"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "\\bvesc",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt VESC."
+    },
+    {
+      "id": "navee-name-mention",
+      "manufacturerIds": [
+        "NAVEE"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "navee",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt Navee."
+    },
+    {
+      "id": "niu-name-mention",
+      "manufacturerIds": [
+        "NIU"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "^niu\\b|\\bniu[\\s_-]",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name beginnt mit bzw. enthält „NIU“."
+    },
+    {
+      "id": "soflow-name-mention",
+      "manufacturerIds": [
+        "SOFLOW"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "so[\\s_-]?flow",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt SoFlow."
+    },
+    {
+      "id": "dualtron-name-mention",
+      "manufacturerIds": [
+        "DUALTRON"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "dualtron|minimotors",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt Dualtron oder Minimotors."
+    },
+    {
+      "id": "joyor-name-mention",
+      "manufacturerIds": [
+        "JOYOR"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "joyor",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt Joyor."
+    },
+    {
+      "id": "iscooter-name-mention",
+      "manufacturerIds": [
+        "ISCOOTER"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "\\biscooter",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt iScooter."
+    },
+    {
+      "id": "vmax-name-mention",
+      "manufacturerIds": [
+        "VMAX"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "\\bvmax\\b",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt VMAX."
+    },
+    {
+      "id": "egret-name-mention",
+      "manufacturerIds": [
+        "EGRET"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "\\begret\\b",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt Egret."
+    },
+    {
+      "id": "etwow-name-mention",
+      "manufacturerIds": [
+        "ETWOW"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "e[\\s_-]?twow",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt E-TWOW."
+    },
+    {
+      "id": "vsett-name-mention",
+      "manufacturerIds": [
+        "VSETT"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "vsett",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt VSETT."
+    },
+    {
+      "id": "kaabo-name-mention",
+      "manufacturerIds": [
+        "KAABO"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "kaabo",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt Kaabo."
+    },
+    {
+      "id": "teverun-name-mention",
+      "manufacturerIds": [
+        "TEVERUN"
+      ],
+      "type": "NAME_REGEX",
+      "pattern": "teverun",
+      "strength": "NAME_MENTION",
+      "verification": "UNVERIFIED",
+      "description": "Name erwähnt Teverun."
+    },
+    {
+      "id": "nordic-uart-supporting",
+      "manufacturerIds": [
+        "XIAOMI",
+        "SEGWAY_NINEBOT",
+        "VESC"
+      ],
+      "type": "SERVICE_UUID",
+      "pattern": "6e400001-b5a3-f393-e0a9-e50e24dcca9e",
+      "strength": "SUPPORTING",
+      "verification": "UNVERIFIED",
+      "description": "Nordic-UART-Dienst: laut Community-Dokumentation von diesen Diagnoseprotokollen genutzt, aber auch von vielen anderen Geräten. Stützt nur vorhandene Hinweise."
+    }
+  ],
+  "models": [
+    {
+      "id": "xiaomi-m365",
+      "manufacturerId": "XIAOMI",
+      "name": "M365",
+      "kind": "SERIES",
+      "designations": [
+        "M365"
+      ],
+      "searchTerms": [
+        "Mi Electric Scooter",
+        "Mijia"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Varianten und technische Daten noch nicht verifiziert erfasst."
+    },
+    {
+      "id": "xiaomi-pro-2",
+      "manufacturerId": "XIAOMI",
+      "name": "Pro 2",
+      "kind": "SERIES",
+      "designations": [
+        "Pro 2",
+        "Pro2"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Varianten und technische Daten noch nicht verifiziert erfasst."
+    },
+    {
+      "id": "xiaomi-4-series",
+      "manufacturerId": "XIAOMI",
+      "name": "4-Serie",
+      "kind": "SERIES",
+      "searchTerms": [
+        "Scooter 4",
+        "4 Pro",
+        "4 Lite",
+        "4 Ultra"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Baureihe mit mehreren Modellen; Varianten noch nicht einzeln erfasst."
+    },
+    {
+      "id": "xiaomi-5-series",
+      "manufacturerId": "XIAOMI",
+      "name": "5-Serie",
+      "kind": "SERIES",
+      "searchTerms": [
+        "Scooter 5",
+        "5 Pro",
+        "5 Max"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Baureihe mit mehreren Modellen; Varianten noch nicht einzeln erfasst."
+    },
+    {
+      "id": "xiaomi-6-series",
+      "manufacturerId": "XIAOMI",
+      "name": "6-Serie",
+      "kind": "SERIES",
+      "searchTerms": [
+        "Scooter 6"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Baureihe mit mehreren Modellen; Varianten noch nicht einzeln erfasst."
+    },
+    {
+      "id": "ninebot-max-g30",
+      "manufacturerId": "SEGWAY_NINEBOT",
+      "name": "MAX G30",
+      "kind": "SERIES",
+      "designations": [
+        "MAX G30",
+        "G30"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list",
+        "segway-g30p-manual"
+      ],
+      "notes": "Es existieren Marktvarianten; diese sind noch nicht einzeln erfasst. Fundstellen der Kennzeichnungen unbekannt: Die Bedienungsanleitung war nicht abrufbar."
+    },
+    {
+      "id": "ninebot-g2",
+      "manufacturerId": "SEGWAY_NINEBOT",
+      "name": "G2",
+      "kind": "SERIES",
+      "designations": [
+        "G2"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Varianten und technische Daten noch nicht verifiziert erfasst."
+    },
+    {
+      "id": "ninebot-g3",
+      "manufacturerId": "SEGWAY_NINEBOT",
+      "name": "G3",
+      "kind": "SERIES",
+      "designations": [
+        "G3"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Varianten und technische Daten noch nicht verifiziert erfasst."
+    },
+    {
+      "id": "ninebot-f-series",
+      "manufacturerId": "SEGWAY_NINEBOT",
+      "name": "F-Serie",
+      "kind": "SERIES",
+      "searchTerms": [
+        "F2",
+        "F25",
+        "F30",
+        "F40",
+        "F65"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Baureihe; Modelle noch nicht einzeln erfasst."
+    },
+    {
+      "id": "ninebot-e-series",
+      "manufacturerId": "SEGWAY_NINEBOT",
+      "name": "E-Serie",
+      "kind": "SERIES",
+      "searchTerms": [
+        "E2",
+        "E22",
+        "E25",
+        "E45"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Baureihe; Modelle noch nicht einzeln erfasst."
+    },
+    {
+      "id": "kukirin-g2",
+      "manufacturerId": "KUKIRIN",
+      "name": "G2",
+      "designations": [
+        "G2"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Technische Daten noch nicht verifiziert erfasst. Nicht mit G2 Max/G2 Master verwechseln."
+    },
+    {
+      "id": "kukirin-g2-max",
+      "manufacturerId": "KUKIRIN",
+      "name": "G2 Max",
+      "designations": [
+        "G2 Max"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Technische Daten noch nicht verifiziert erfasst."
+    },
+    {
+      "id": "kukirin-g2-master",
+      "manufacturerId": "KUKIRIN",
+      "name": "G2 Master",
+      "designations": [
+        "G2 Master"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Technische Daten noch nicht verifiziert erfasst."
+    },
+    {
+      "id": "kukirin-g3-pro",
+      "manufacturerId": "KUKIRIN",
+      "name": "G3 Pro",
+      "designations": [
+        "G3 Pro"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Technische Daten noch nicht verifiziert erfasst."
+    },
+    {
+      "id": "kukirin-g4",
+      "manufacturerId": "KUKIRIN",
+      "name": "G4",
+      "designations": [
+        "G4"
+      ],
+      "completeness": "STUB",
+      "sourceIds": [
+        "project-model-list"
+      ],
+      "notes": "Technische Daten noch nicht verifiziert erfasst."
+    }
+  ]
+}
