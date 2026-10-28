@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "dataVersion": "2026.10.28-2",
-  "dataVersionCode": 2026102802,
+  "dataVersion": "2026.10.28-3",
+  "dataVersionCode": 2026102803,
   "generatedAt": "2026-10-28",
   "isDemo": false,
   "description": "Erstbestand. Enthält belegte BLE-Kennungen (Bluetooth SIG), Modellbezeichnungen und belegte Fundstellen von Kennzeichnungen (Herstellerseiten). Technische Originaldaten sind noch nicht verifiziert erfasst und daher als unbekannt markiert.",
@@ -46,6 +46,22 @@
       "url": "https://store.segway.com/pub/media/wysiwyg/warranty/Ninebot-KickScooter-Max-G30P-User-Manual.pdf",
       "publisher": "Segway-Ninebot",
       "note": "Am 28.10.2026 nicht abrufbar (Server lieferte eine Fehlerseite). Inhalte daher noch nicht ausgewertet."
+    },
+    {
+      "id": "manual-kukirin-g2",
+      "title": "KuKirin G2 Bedienungsanleitung (Spiegelung auf ManualsLib)",
+      "url": "https://www.manualslib.tech/guide/775773/kukirin-g2-manual.html",
+      "publisher": "KuKirin (laut Anleitung: www.kukirin.net)",
+      "accessed": "2026-10-28",
+      "note": "Inoffizielle Spiegelung; Marktvariante und Ausgabedatum nicht angegeben."
+    },
+    {
+      "id": "manual-kukirin-g2-max",
+      "title": "KuKirin G2 Max Bedienungsanleitung (Spiegelung auf ManualsLib)",
+      "url": "https://www.manualslib.tech/guide/780391/kukirin-g2-max-manual.html",
+      "publisher": "KuKirin (laut Anleitung: www.kukirin.net)",
+      "accessed": "2026-10-28",
+      "note": "Inoffizielle Spiegelung; Marktvariante und Ausgabedatum nicht angegeben."
     }
   ],
   "manufacturers": [
@@ -771,11 +787,47 @@
       "designations": [
         "G2"
       ],
-      "completeness": "STUB",
+      "completeness": "PARTIAL",
       "sourceIds": [
-        "project-model-list"
+        "project-model-list",
+        "manual-kukirin-g2"
       ],
-      "notes": "Technische Daten noch nicht verifiziert erfasst. Nicht mit G2 Max/G2 Master verwechseln."
+      "notes": "Nur unbestätigte Angaben aus der Bedienungsanleitung. Nicht mit G2 Max/G2 Master verwechseln. Händler und kukirin.it.com nennen für andere Ausführungen deutlich höhere Werte. Diese Seiten waren beim Abruf am 28.10.2026 nicht lesbar (HTTP 429) bzw. widersprüchlich und wurden nicht übernommen. Kein verifizierter Herstellerwert verfügbar.",
+      "lastReviewed": "2026-10-28",
+      "variants": [
+        {
+          "id": "manual",
+          "name": "Ausführung laut Bedienungsanleitung (≤ 25 km/h)",
+          "maxSpeedKmh": {
+            "value": 25,
+            "unit": "km/h",
+            "status": "UNVERIFIED",
+            "sourceIds": [
+              "manual-kukirin-g2"
+            ],
+            "note": "Anleitung: „Maximum speed ≤ 25 km/h“"
+          },
+          "nominalVoltageV": {
+            "value": 48,
+            "unit": "V",
+            "status": "UNVERIFIED",
+            "sourceIds": [
+              "manual-kukirin-g2"
+            ],
+            "note": "Anleitung: „Voltage/Capacity 48V/15Ah“"
+          },
+          "completeness": "STUB",
+          "lastReviewed": "2026-10-28",
+          "notes": "Akku laut Anleitung 48 V / 15 Ah. Nenn- und Spitzenleistung sowie Controller nicht angegeben."
+        },
+        {
+          "id": "other-market",
+          "name": "Andere Marktausführung (Werte unbekannt)",
+          "completeness": "STUB",
+          "lastReviewed": "2026-10-28",
+          "notes": "Platzhalter: Händlerangaben deuten auf Ausführungen ohne 25-km/h-Begrenzung hin; Werte nicht belegt."
+        }
+      ]
     },
     {
       "id": "kukirin-g2-max",
@@ -784,11 +836,47 @@
       "designations": [
         "G2 Max"
       ],
-      "completeness": "STUB",
+      "completeness": "PARTIAL",
       "sourceIds": [
-        "project-model-list"
+        "project-model-list",
+        "manual-kukirin-g2-max"
       ],
-      "notes": "Technische Daten noch nicht verifiziert erfasst."
+      "notes": "Nur unbestätigte Angaben aus der Bedienungsanleitung. Händler und kukirin.it.com nennen für andere Ausführungen deutlich höhere Werte. Diese Seiten waren beim Abruf am 28.10.2026 nicht lesbar (HTTP 429) bzw. widersprüchlich und wurden nicht übernommen. Kein verifizierter Herstellerwert verfügbar.",
+      "lastReviewed": "2026-10-28",
+      "variants": [
+        {
+          "id": "manual",
+          "name": "Ausführung laut Bedienungsanleitung (≤ 25 km/h)",
+          "maxSpeedKmh": {
+            "value": 25,
+            "unit": "km/h",
+            "status": "UNVERIFIED",
+            "sourceIds": [
+              "manual-kukirin-g2-max"
+            ],
+            "note": "Anleitung: „Maximum speed ≤ 25 km/h“"
+          },
+          "nominalVoltageV": {
+            "value": 48,
+            "unit": "V",
+            "status": "UNVERIFIED",
+            "sourceIds": [
+              "manual-kukirin-g2-max"
+            ],
+            "note": "Anleitung: „Voltage/Capacity 48V/20.8Ah“"
+          },
+          "completeness": "STUB",
+          "lastReviewed": "2026-10-28",
+          "notes": "Akku laut Anleitung 48 V / 20,8 Ah. Die Anleitung nennt einen Displayparameter P07 „Speed limit setting: range 0-100 percentage speed limit; (default 100)“. Nenn- und Spitzenleistung sowie Controller nicht angegeben."
+        },
+        {
+          "id": "other-market",
+          "name": "Andere Marktausführung (Werte unbekannt)",
+          "completeness": "STUB",
+          "lastReviewed": "2026-10-28",
+          "notes": "Platzhalter: Händlerangaben deuten auf Ausführungen ohne 25-km/h-Begrenzung hin; Werte nicht belegt."
+        }
+      ]
     },
     {
       "id": "kukirin-g2-master",
@@ -801,7 +889,8 @@
       "sourceIds": [
         "project-model-list"
       ],
-      "notes": "Technische Daten noch nicht verifiziert erfasst."
+      "notes": "Technische Daten nicht verifiziert erfasst. Recherche am 28.10.2026: keine Herstellerdaten abrufbar, Händlerangaben widersprüchlich.",
+      "lastReviewed": "2026-10-28"
     },
     {
       "id": "kukirin-g3-pro",
@@ -814,7 +903,8 @@
       "sourceIds": [
         "project-model-list"
       ],
-      "notes": "Technische Daten noch nicht verifiziert erfasst."
+      "notes": "Technische Daten nicht verifiziert erfasst. Recherche am 28.10.2026: keine Herstellerdaten abrufbar, Händlerangaben widersprüchlich.",
+      "lastReviewed": "2026-10-28"
     },
     {
       "id": "kukirin-g4",
@@ -827,7 +917,8 @@
       "sourceIds": [
         "project-model-list"
       ],
-      "notes": "Technische Daten noch nicht verifiziert erfasst."
+      "notes": "Technische Daten nicht verifiziert erfasst. Recherche am 28.10.2026: keine Herstellerdaten abrufbar, Händlerangaben widersprüchlich.",
+      "lastReviewed": "2026-10-28"
     }
   ]
 }
